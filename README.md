@@ -1,2 +1,2 @@
 # Vigenere
-Implementation of the Vigenère cipher - don't use it
+Implementation of the Vigenère cipher - do not use it
