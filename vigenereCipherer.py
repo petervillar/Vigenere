@@ -16,8 +16,8 @@ class vigenereCipherer:
     def encode_message(self):
         encoded_msg = []
 
-        for i in range(len(self.message)):
-            N = ord(self.message[i]) - 97
+        for i, j in enumerate(self.message):
+            N = ord(j) - 97
             K = ord(self.key[i % len(self.key)]) - 97
             D = N + K
             if D > 25:
@@ -30,8 +30,8 @@ class vigenereCipherer:
     def decode_message(self):
         decoded_msg = []
 
-        for i in range(len(self.message)):
-            N = ord(self.message[i]) - 97  # ord('a') = 97
+        for i, j in enumerate(self.message):
+            N = ord(j) - 97  # ord('a') = 97
             K = ord(self.key[i % len(self.key)]) - 97
             D = N - K
             if D < 0:
