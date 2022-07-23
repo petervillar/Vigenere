@@ -1,5 +1,6 @@
 import unittest
-from .. import vigenereCipherer
+from vigenereCipherer import vigenereCipherer
+
 
 class TestClass(unittest.TestCase):
     def test_encryption(self):
