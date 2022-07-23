@@ -42,15 +42,16 @@ class vigenereCipherer:
         return "".join(decoded_msg)
 
 
-message = input("Enter a message: ").lower()
-key = input("Enter a cipher keyword: ").lower()
+if __name__ == "__main__":
 
-encoder_decoder = vigenereCipherer(message, key)
-print(encoder_decoder)
-encoded_message = encoder_decoder.encode_message()
-print(f"Encoded message: {encoded_message}")
+    message = "superduper"
+    key = "xyzzy"
+    encoder_decoder = vigenereCipherer(message, key)
+    print(encoder_decoder)
+    encoded_message = encoder_decoder.encode_message()
+    print(f"Encoded message: {encoded_message}")
 
-encoder_decoder = vigenereCipherer(encoded_message, key)
-print(encoder_decoder)
-decoded_message = encoder_decoder.decode_message()
-print(f"Decoded message: {decoded_message}")
+    encoder_decoder = vigenereCipherer(encoded_message, key)
+    print(encoder_decoder)
+    decoded_message = encoder_decoder.decode_message()
+    print(f"Decoded message: {decoded_message}")
